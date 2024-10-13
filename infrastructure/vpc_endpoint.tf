@@ -39,3 +39,7 @@ resource "aws_vpc_endpoint" "demo_monitoring_vpc_endpoint" {
 /*
  -- Small Test before the demo -- 20-09-2023 10.03 --
 */
+
+/*
+* Test change in vpc_endpoint 1
+*/
