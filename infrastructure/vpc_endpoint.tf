@@ -43,4 +43,5 @@ resource "aws_vpc_endpoint" "demo_monitoring_vpc_endpoint" {
 /*
 * Test change in vpc_endpoint 1
 * Check changes in the VPC endpoint
+* Another change check
 */
