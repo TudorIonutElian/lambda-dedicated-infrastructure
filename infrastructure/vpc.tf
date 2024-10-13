@@ -15,3 +15,7 @@ resource "aws_vpc" "demo_private_vpc" {
     Project = "irs_demo_vpc_endpoint"
   }
 }
+
+/*
+* Test change in VPC
+*/
