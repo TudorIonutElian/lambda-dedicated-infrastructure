@@ -29,4 +29,5 @@ resource "aws_security_group_rule" "demo_monitoring_vpc_endpoint_sg_inbound_rule
 * Should fail as this is a restricted rule
 * One more change bold and red color
 * Check if the plan is an artifact
+* Check if the plan is an artifact
 */
