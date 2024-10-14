@@ -3,6 +3,7 @@ const { CloudWatchClient, PutMetricDataCommand } = require('@aws-sdk/client-clou
 const cloudwatch = new CloudWatchClient();
 
 module.exports.handler = async (event) => {
+    console.log('Received event:', JSON.stringify(event, null, 2));
     const metricData = {
         MetricData: [
             {
