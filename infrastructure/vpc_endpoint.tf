@@ -45,4 +45,3 @@ resource "aws_vpc_endpoint" "demo_monitoring_vpc_endpoint" {
 * Check changes in the VPC endpoint
 * Another change check
 */
-
