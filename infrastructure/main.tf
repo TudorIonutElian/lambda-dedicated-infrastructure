@@ -29,4 +29,3 @@ provider "aws" {
   profile                  = "default"
 }
 
-/* Test infrastructure */
