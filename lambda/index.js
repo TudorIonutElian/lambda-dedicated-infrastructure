@@ -22,6 +22,7 @@ module.exports.handler = async (event) => {
     };
 
      console.log('Try lambda change ...');
+    console.log('Try lambda change ... 2');
 
     try {
         // Put the custom metric data to CloudWatch
