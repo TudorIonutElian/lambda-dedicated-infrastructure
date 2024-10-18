@@ -13,8 +13,8 @@
     - subnet_ids: The subnet IDs for the Lambda function.
 */
 resource "aws_lambda_function" "lambda_push_metrics_vpc_endpoint_func" {
-  filename         = "lambda_push_metrics_vpc_endpoint_func.zip"
-  function_name    = "lambda-push-metrics-vpc-endpoint-func"
+  filename         = "lambda_dedicated_infrastructure_func.zip"
+  function_name    = "lambda-dedicated-infrastructure-func"
   role             = aws_iam_role.lambda_push_metrics_vpc_endpoint_func_role.arn
   handler          = "index.handler"
   runtime          = "nodejs20.x"
