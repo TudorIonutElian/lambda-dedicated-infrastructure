@@ -13,20 +13,11 @@
     - subnet_ids: The subnet IDs for the Lambda function.
 */
 resource "aws_lambda_function" "lambda_push_metrics_vpc_endpoint_func" {
-  filename         = "lambda_dedicated_infrastructure_func.zip"
-  function_name    = "lambda-dedicated-infrastructure-func"
+  filename         = data.archive_file.lambda_push_metrics_vpc_endpoint_func_archive.output_path
+  source_code_hash = data.archive_file.lambda_push_metrics_vpc_endpoint_func_archive.output_base64sha256
+  function_name    = "lambda_push_metrics_vpc_endpoint_func"
   role             = aws_iam_role.lambda_push_metrics_vpc_endpoint_func_role.arn
   handler          = "index.handler"
-  runtime          = "nodejs20.x"
-  source_code_hash = filebase64sha256("lambda_dedicated_infrastructure_func.zip")
-
-  vpc_config {
-    security_group_ids = [aws_security_group.demo_lambda_sg.id]
-    subnet_ids         = [aws_subnet.demo_private_subnet.id]
-  }
-
-  tags = {
-    Name = "irs_lambda_push_metrics_vpc_endpoint_func"
-    Project = "irs_demo_vpc_endpoint"
-  }
+  runtime          = "nodejs14.x"
+  depends_on       = [data.archive_file.lambda_push_metrics_vpc_endpoint_func_archive]
 }
