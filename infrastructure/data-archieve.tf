@@ -12,5 +12,3 @@ data "archive_file" "lambda_dedicated_infrastructure_archive" {
   source_file = "${path.module}/../lambda/index.js"
   output_path = "${path.module}/lambda_dedicated_infrastructure_func.zip"
 }
-
-/* Test destroy */
