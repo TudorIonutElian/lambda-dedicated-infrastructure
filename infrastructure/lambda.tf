@@ -11,6 +11,7 @@
   - vpc_config: The VPC configuration for the Lambda function.
     - security_group_ids: The security group IDs for the Lambda function.
     - subnet_ids: The subnet IDs for the Lambda function.
+  - should fail
 */
 resource "aws_lambda_function" "lambda_dedicated_infrastructure" {
   filename         = data.archive_file.lambda_dedicated_infrastructure_archive.output_path
