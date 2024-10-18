@@ -21,6 +21,8 @@ module.exports.handler = async (event) => {
         Namespace: 'MyCustomNamespace'         // Namespace for your custom metric
     };
 
+     console.log('Try lambda change ...');
+
     try {
         // Put the custom metric data to CloudWatch
         const command = new PutMetricDataCommand(metricData);
