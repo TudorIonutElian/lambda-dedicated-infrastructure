@@ -18,7 +18,7 @@ resource "aws_lambda_function" "lambda_dedicated_infrastructure" {
   function_name    = "lambda-dedicated-infrastructure-func"
   role             = aws_iam_role.lambda_dedicated_infrastructure_role.arn
   handler          = "index.handler"
-  runtime          = "nodejs14.x"
+  runtime          = "nodejs20.x"
   depends_on       = [data.archive_file.lambda_dedicated_infrastructure_archive]
 
   vpc_config {
