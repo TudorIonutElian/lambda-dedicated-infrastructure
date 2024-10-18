@@ -11,11 +11,7 @@ resource "aws_vpc" "demo_private_vpc" {
   enable_dns_hostnames = true
 
   tags = {
-    Name    = "demo_private_vpc"
-    Project = "irs_demo_vpc_endpoint"
+    Name = "resource_dedicated_infrastructure"
+    Project = "lambda_dedicated_infrastructure"
   }
 }
-
-/*
-* Test change in VPC 1 
-*/

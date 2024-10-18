@@ -5,7 +5,7 @@ resource "aws_subnet" "demo_private_subnet" {
   map_public_ip_on_launch = false
 
   tags = {
-    Name    = "demo_private_subnet"
-    Project = "irs_demo_vpc_endpoint"
+    Name = "resource_dedicated_infrastructure"
+    Project = "lambda_dedicated_infrastructure"
   }
 }

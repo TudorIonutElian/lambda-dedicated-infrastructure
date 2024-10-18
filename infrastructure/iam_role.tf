@@ -6,11 +6,11 @@
   - assume_role_policy: The ARN of the IAM policy document that allows the Lambda function to assume the role.
 */
 resource "aws_iam_role" "lambda_dedicated_infrastructure_role" {
-  name               = "lambda-push-metrics-vpc-endpoint-func-role"
+  name               = "lambda-dedicated-infrastructure-func-role"
   assume_role_policy = data.aws_iam_policy_document.LambdaAWSLambdaTrustPolicy.json
 
   tags = {
-    Name = "irs_lambda_dedicated_infrastructure_role"
-    Project = "irs_demo_vpc_endpoint"
+    Name = "resource_dedicated_infrastructure"
+    Project = "lambda_dedicated_infrastructure"
   }
 }

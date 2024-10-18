@@ -20,4 +20,14 @@ resource "aws_lambda_function" "lambda_dedicated_infrastructure" {
   handler          = "index.handler"
   runtime          = "nodejs14.x"
   depends_on       = [data.archive_file.lambda_dedicated_infrastructure_archive]
+
+  vpc_config {
+    security_group_ids = [aws_security_group.demo_lambda_sg.id]
+    subnet_ids         = [aws_subnet.demo_private_subnet.id]
+  }
+
+  tags = {
+    Name = "resource_dedicated_infrastructure"
+    Project = "lambda_dedicated_infrastructure"
+  }
 }

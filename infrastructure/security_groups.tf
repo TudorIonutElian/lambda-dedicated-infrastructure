@@ -8,8 +8,8 @@ resource "aws_security_group" "demo_lambda_sg" {
   vpc_id = aws_vpc.demo_private_vpc.id
 
   tags = {
-    Name = "irs_demo_lambda_sg"
-    Project = "irs_demo_vpc_endpoint"
+    Name = "resource_dedicated_infrastructure"
+    Project = "lambda_dedicated_infrastructure"
   }
 }
 
@@ -21,8 +21,9 @@ resource "aws_security_group" "demo_lambda_sg" {
 resource "aws_security_group" "demo_monitoring_vpc_endpoint_sg" {
   name = "demo_monitoring_vpc_endpoint_sg"
   vpc_id = aws_vpc.demo_private_vpc.id
+  
   tags = {
-    Name = "irs_demo_monitoring_vpc_endpoint_sg"
-    Project = "irs_demo_vpc_endpoint"
+    Name = "resource_dedicated_infrastructure"
+    Project = "lambda_dedicated_infrastructure"
   }
 }

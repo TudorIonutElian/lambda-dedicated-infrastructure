@@ -31,18 +31,11 @@ resource "aws_vpc_endpoint" "demo_monitoring_vpc_endpoint" {
     EOF
 
   tags = {
-    Name = "irs_demo_monitoring_vpc_endpoint"
-    Project = "irs_demo_vpc_endpoint"
+    Name = "resource_dedicated_infrastructure"
+    Project = "lambda_dedicated_infrastructure"
   }
 }
 
 /*
  -- Small Test before the demo -- 20-09-2023 10.03 --
-*/
-
-/*
-* Test change in vpc_endpoint 1
-* Check changes in the VPC endpoint
-* Another change check
-*
 */

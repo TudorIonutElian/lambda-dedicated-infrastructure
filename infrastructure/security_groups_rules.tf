@@ -23,11 +23,3 @@ resource "aws_security_group_rule" "demo_monitoring_vpc_endpoint_sg_inbound_rule
   security_group_id        = aws_security_group.demo_monitoring_vpc_endpoint_sg.id
   source_security_group_id = aws_security_group.demo_lambda_sg.id
 }
-
-/*
-* Test change in security group rules 1
-* Should fail as this is a restricted rule
-* One more change bold and red color
-* Check if the plan is an artifact
-* Check if the plan is an artifact
-*/
