@@ -19,27 +19,3 @@ data "aws_iam_policy_document" "LambdaAWSLambdaTrustPolicy" {
     }
   }
 }
-
-/**
-  - aws_iam_policy_document is a data source that generates an IAM policy document 
-  - that can be referenced by other resources.
-*/
-data "aws_iam_policy_document" "demo_lambda_put_metric_policy_doc" {
-  statement {
-    actions   = ["cloudwatch:PutMetricData"]
-    resources = ["*"]
-    effect    = "Allow"
-  }
-}
-
-/**
-  - aws_iam_policy_document is a data source that generates an IAM policy document 
-  - that can be referenced by other resources.
-*/
-data "aws_iam_policy_document" "demo_lambda_create_network_interface_policy_doc" {
-  statement {
-    actions   = ["ec2:CreateNetworkInterface", "ec2:DescribeNetworkInterfaces", "ec2:DeleteNetworkInterface"]
-    resources = ["*"]
-    effect    = "Allow"
-  }
-}
