@@ -7,7 +7,7 @@
     - output_path: The path to save the archive file.
 */
 
-data "archive_file" "lambda_push_metrics_vpc_endpoint_func_archive" {
+data "archive_file" "lambda_dedicated_infrastructure_archive" {
   type        = "zip"
   source_file = "${path.module}/../lambda/index.js"
   output_path = "${path.module}/lambda_dedicated_infrastructure_func.zip"

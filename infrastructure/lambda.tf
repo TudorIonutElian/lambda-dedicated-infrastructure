@@ -12,12 +12,12 @@
     - security_group_ids: The security group IDs for the Lambda function.
     - subnet_ids: The subnet IDs for the Lambda function.
 */
-resource "aws_lambda_function" "lambda_push_metrics_vpc_endpoint_func" {
-  filename         = data.archive_file.lambda_push_metrics_vpc_endpoint_func_archive.output_path
-  source_code_hash = data.archive_file.lambda_push_metrics_vpc_endpoint_func_archive.output_base64sha256
-  function_name    = "lambda_push_metrics_vpc_endpoint_func"
-  role             = aws_iam_role.lambda_push_metrics_vpc_endpoint_func_role.arn
+resource "aws_lambda_function" "lambda_dedicated_infrastructure" {
+  filename         = data.archive_file.lambda_dedicated_infrastructure_archive.output_path
+  source_code_hash = data.archive_file.lambda_dedicated_infrastructure_archive.output_base64sha256
+  function_name    = "lambda-dedicated-infrastructure-func"
+  role             = aws_iam_role.lambda_dedicated_infrastructure_role.arn
   handler          = "index.handler"
   runtime          = "nodejs14.x"
-  depends_on       = [data.archive_file.lambda_push_metrics_vpc_endpoint_func_archive]
+  depends_on       = [data.archive_file.lambda_dedicated_infrastructure_archive]
 }
