@@ -14,3 +14,4 @@ resource "aws_iam_role" "lambda_dedicated_infrastructure_role" {
     Project = "lambda_dedicated_infrastructure"
   }
 }
+/* Testing lambda_dedicated_infrastructure_role */
