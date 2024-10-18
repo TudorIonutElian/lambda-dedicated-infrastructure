@@ -9,6 +9,6 @@
 
 data "archive_file" "lambda_push_metrics_vpc_endpoint_func_archive" {
   type        = "zip"
-  source_file = "../lambda/lambda-dedicated-infrastructure/index.js"
-  output_path = "lambda_dedicated_infrastructure_func.zip"
+  source_file = "${path.module}/../lambda/index.js"
+  output_path = "${path.module}/lambda_dedicated_infrastructure_func.zip"
 }
