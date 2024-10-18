@@ -15,5 +15,4 @@ resource "aws_iam_role" "lambda_dedicated_infrastructure_role" {
   }
 }
 
-/* Predeploy */
-/* Predeploy */
+/* Destroy */
