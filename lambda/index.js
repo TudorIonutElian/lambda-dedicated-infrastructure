@@ -21,7 +21,7 @@ module.exports.handler = async (event) => {
         Namespace: 'MyCustomNamespace'         // Namespace for your custom metric
     };
 
-    console.log('Try lambda change before Architecture Demo...');
+    console.log('Try lambda change after Architecture Demo...');
     console.log('Try lambda change ... 2');
 
     try {
